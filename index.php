@@ -42,6 +42,11 @@ mysqli_close($conn);
 </head>
 <body>
 
+<div class="navbar">
+    <a href="index.php">Feedback Form</a>
+    <a href="guestbook.php">View Guest Book</a>
+</div>
+
 <h2>Feedback Form</h2>
 
 <form action="" method="POST">
