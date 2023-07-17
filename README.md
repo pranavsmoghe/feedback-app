@@ -18,7 +18,7 @@ This is a PHP project that allows users to submit reviews for a restaurant via a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/restaurant-review-guestbook.git
+   git clone https://github.com/pranavsmoghe/feedback-app.git
 
 2. Configure the database connection settings in the config.php file with your MySQL credentials:
 
@@ -31,4 +31,4 @@ This is a PHP project that allows users to submit reviews for a restaurant via a
 
 Place the project files in your PHP web server's document root directory.
 
-Access the application in your web browser: http://localhost/restaurant-review-guestbook/index.php
+Access the application in your web browser: http://localhost/feedback-app/index.php
