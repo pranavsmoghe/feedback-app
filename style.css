@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #212121;
-    --secondary-color: #FFFFFF;
-    --tertiary-color: #FF9800;
-    --quaternary-color: #607D8B;
-    --background-color: linear-gradient(to bottom, #303030, #212121);
+    --primary-color: #212121; /* dark gray */
+    --secondary-color: #FFFFFF; /* white */
+    --tertiary-color: #FF9800; /* orange */
+    --quaternary-color: #607D8B; /* blue gray */
+    --background-color: linear-gradient(to bottom, #303030, #212121); /* darker gray gradient */
   }
   
   .navbar {
@@ -35,18 +35,17 @@
     padding: 40px;
     border: 2px solid var(--primary-color);
     background-color: var(--primary-color);
-    border-radius: 20px;
+    border-radius: 20px; /* add curved corners to the form box */
   }
   
+  /* Style the label elements */
   label {
     display: inline-block;
     width: 100px;
     color: var(--secondary-color);
   }
   
-  input,
-  select,
-  textarea {
+  input, select, textarea {
     width: 400px;
   }
   
@@ -65,36 +64,5 @@
   
   input[type=submit]:hover {
     background-color: var(--quaternary-color);
-  }
-  
-  .entry {
-    background-color: #ffffff;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .label {
-    width: 120px;
-    font-weight: bold;
-    color: #555555;
-  }
-  
-  .value {
-    flex-grow: 1;
-  }
-  
-  hr {
-    border: none;
-    border-top: 1px solid #e1e1e1;
-    margin: 20px 0;
   }
   

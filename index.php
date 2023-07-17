@@ -51,10 +51,10 @@ mysqli_close($conn);
 
 <form action="" method="POST">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br><br>
+  <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
 
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required><br><br>
+  <input type="email" id="email" name="email" required placeholder="Enter your e-mail"><br><br>
 
   <label for="branch">Branch:</label>
   <select id="branch" name="branch" required>

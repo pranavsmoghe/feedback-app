@@ -12,25 +12,46 @@ if (!$conn) {
 $sql = "SELECT * FROM feedback";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-    echo "<h2>Guest Book</h2>";
+?>
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<div>";
-        echo "<p><strong>Name:</strong> " . $row['name'] . "</p>";
-        echo "<p><strong>Email:</strong> " . $row['email'] . "</p>";
-        echo "<p><strong>Branch:</strong> " . $row['branch'] . "</p>";
-        echo "<p><strong>Cuisine:</strong> " . $row['cuisine'] . "</p>";
-        echo "<p><strong>Date of Visit:</strong> " . $row['date_of_visit'] . "</p>";
-        echo "<p><strong>Cleanliness:</strong> " . $row['cleanliness'] . "</p>";
-        echo "<p><strong>Service Quality:</strong> " . $row['service_quality'] . "</p>";
-        echo "<p><strong>Feedback:</strong> " . $row['feedback'] . "</p>";
-        echo "</div>";
-        echo "<hr>";
-    }
-} else {
-    echo "No entries found in the guest book.";
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guest Book</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
 
+    <div class="navbar">
+        <a href="index.php">Feedback Form</a>
+        <a href="guestbook.php">View Guest Book</a>
+    </div>
+
+  <h2>Guest Book</h2>
+
+  <?php
+  if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+          echo '<div class="entry">';
+          echo '<div class="row"><div class="label">Name:</div><div class="value">' . $row['name'] . '</div></div>';
+          echo '<div class="row"><div class="label">Email:</div><div class="value">' . $row['email'] . '</div></div>';
+          echo '<div class="row"><div class="label">Branch:</div><div class="value">' . $row['branch'] . '</div></div>';
+          echo '<div class="row"><div class="label">Cuisine:</div><div class="value">' . $row['cuisine'] . '</div></div>';
+          echo '<div class="row"><div class="label">Date of Visit:</div><div class="value">' . $row['date_of_visit'] . '</div></div>';
+          echo '<div class="row"><div class="label">Cleanliness:</div><div class="value">' . $row['cleanliness'] . '</div></div>';
+          echo '<div class="row"><div class="label">Service Quality:</div><div class="value">' . $row['service_quality'] . '</div></div>';
+          echo '<div class="row"><div class="label">Feedback:</div><div class="value">' . $row['feedback'] . '</div></div>';
+          echo '</div>';
+          echo '<hr>';
+      }
+  } else {
+      echo '<p>No entries found in the guest book.</p>';
+  }
+  ?>
+
+</body>
+</html>
+
+<?php
 mysqli_close($conn);
 ?>
